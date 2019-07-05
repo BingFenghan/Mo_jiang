@@ -40,6 +40,8 @@ for i in range(len(L)):
 							uv_value[m] = round(float(uv_value[m]))
 						if (0.95 < decimal_part < 1) == True:
 							uv_value[m] = round(float(uv_value[m]))
+						if (0.47 < decimal_part < 0.53) == True:
+							uv_value[m] = math.modf(float(uv_value[m]))[1] + 0.5
 						new_line = new_line + str(uv_value[m]) + ', '
 					line = new_line.strip(', ')
 					line = space + '"uv": [' + line + '],' +'\r'
@@ -57,11 +59,13 @@ for i in range(len(L)):
 						new_value = []
 						new_line = ""
 						for m in range(len(uv_value)):
-						decimal_part = math.modf(float(uv_value[m]))[0]
-						if (0 < decimal_part < 0.05) == True:
-							uv_value[m] = round(float(uv_value[m]))
-						if (0.95 < decimal_part < 1) == True:
-							uv_value[m] = round(float(uv_value[m]))
+							decimal_part = math.modf(float(uv_value[m]))[0]
+							if (0 < decimal_part < 0.05) == True:
+								uv_value[m] = round(float(uv_value[m]))
+							if (0.95 < decimal_part < 1) == True:
+								uv_value[m] = round(float(uv_value[m]))
+							if (0.47 < decimal_part < 0.53) == True:
+								uv_value[m] = math.modf(float(uv_value[m]))[1] + 0.5
 							new_line = new_line + str(uv_value[m]) + ', '
 						line_1 = new_line.strip(', ')
 						before = line.split('[')[0]
