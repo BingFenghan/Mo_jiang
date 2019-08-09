@@ -1,0 +1,295 @@
+##########################################
+##                                      ##
+##      Bungee Chat Filter Config       ##
+##                 v1.7                 ##
+##########################################
+
+#监控命令 - 监控玩家作为聊天发送的命令
+Monitor Commands: false
+
+#命令 - 插件将监视的命令列表
+Commands:
+#    - msg
+#    - message
+#    - m
+#    - tell
+#    - whisper
+#    - w
+#    - g
+#    - global
+#    - s
+#    - l
+#    - local
+#    - url
+#    - website
+#    - hub
+#    - shop
+#    - broadcast
+
+#反垃圾消息 - 将使用最小聊天延迟强制玩家等待* 1500毫秒或者您在消息之间指定的内容
+AntiSpam: false
+AntiRepeat: false
+#最小聊天间隔 - 玩家必须在消息之间等待的时间(以毫秒为单位)
+Minimum-Chat-Delay: 1500
+Minimum-Repeat-Delay: 60000
+#被AntiSpam或AntiRepeat阻止时，在聊天中发送给玩家的消息
+AntiSpamMessage: &cPlease do not spam
+AntiRepeatMessage: &cPlease do not spam
+
+#Rules - 监控聊天的规则组
+#rules:
+#   rulename:                       - 规则的名称.
+#       regex:                      - 规则将检查的字符串正则表达式.
+#       ignores:                    - 如果消息包含与ignore匹配的值，则不会执行任何操作.
+#       permission:                 - 绕过此规则所需的权限.
+#       actions:                    - 这是匹配时规则将执行的操作列表.
+#           deny: true              - 这将拒绝该消息并取消该事件.
+#           message: <message>      - 这将向玩家发送消息<message>.(支持变量，见下文)
+#           kick: <message>         - 这将使用<message>踢出.(支持变量，见下文)
+#           alert: <message>        - 这会将<message>发送给连接到服务器的所有玩家.(支持变量，见下文)
+#           remove: true            - 这将删除玩家消息中的所有匹配项.
+#           replace:                - 这将用下面列表中的随机单词替换匹配的单词.(支持变量，见下文)
+#               - word1
+#               - word2
+#           lower: true             - 这会将任何匹配更改为小写.
+#           pcommand: (command)     - 代理命令，这将导致玩家将(命令)发送到代理服务器.不要包含/.(支持变量，见下文)
+#           scommand: /(command)    - 服务器命令这将导致玩家将(命令)发送到他们当前的服务器。你必须包括/.(支持变量，见下文)
+#           ccommand: (command)     - 控制台命令，这将导致代理服务器控制台执行(命令).不要包含/.(支持变量，见下文)
+#                                     请注意，目前无法将命令作为当前服务器控制台执行.
+
+#Placeholders                       - 这些变量可用于任何操作字符串.
+#
+# {player}                          - 玩家的名称.
+# {message}                         - 玩家发送的原消息.
+# {arguments}                       - 玩家命令第一个参数后的所有字符串内容.
+#                                     (例如发送"/发送Zedwick Hello!"的玩家将返回"Zedwick Hello!"代替{arguments}).
+
+rules:
+    # B
+    B1:
+        regex: 
+            - (?i)(blyat)
+        actions:
+            replace:
+                - 伏特加
+    # C
+    C1:
+        regex: 
+            - (?i)(cnm)
+            - 操你妈
+            - 草泥马
+        actions:
+            replace:
+                - 我爱你
+    C2:
+        regex: 
+            - (?i)(cyka)
+        actions:
+            replace:
+                - 兄弟伏特加
+    C3:
+        regex:
+            - 蔡徐坤
+        actions:
+            replace:
+                - 墨江
+    C4:
+        regex:
+            - 丑逼
+            - 丑比
+            - 丑东西
+        actions:
+            replace:
+                - 你真漂亮
+    C5:
+        regex:
+        - 吃屎
+        actions:
+            replace:
+                - 吃饭
+    # D
+    D1:
+        regex:
+        - (?i)(dd)
+        - 臭弟弟
+        actions:
+            replace:
+                - 结个婚
+    # F
+    F1:
+        regex:
+        - (?i)(fuck)
+        actions:
+            replace:
+                - 爱你
+    F2:
+        regex:
+        - 肥蛆
+        actions:
+            replace:
+                - 小胖子
+    F3:
+        regex:
+        - 废物
+        actions:
+            replace:
+                - 栋梁
+    # G
+    G1:
+        regex:
+        - 骨灰都给扬喽
+        actions:
+            replace:
+            - 还能要个孩子
+    G2:
+        regex:
+        - 苟
+        actions:
+            replace:
+            - 可爱的
+    # J
+    J1:
+        regex:
+        - (?i)(jb)
+        - 几把
+        - 鸡吧
+        actions:
+            replace:
+            - jiebi
+    J2:
+        regex:
+        - 江泽民
+        actions:
+            replace:
+            - '***'
+    # N
+    N1:
+        regex:
+        - (?i)(nmsl)
+        - 你妈死了
+        - 你马死了
+        actions:
+            replace:
+            - 不要惧怕谣言与中伤
+    N2:
+        regex:
+        - 你妈炸了
+        - 你马炸了
+        actions:
+            replace:
+            - 我炸了
+    N3:
+        regex:
+        - 你会玩吗
+        actions:
+            replace:
+            - 你玩的真不错
+    # R
+    R1:
+        regex:
+        - (?i)(rz)
+        - 弱智
+        - 智障
+        actions:
+            replace:
+            - 机灵鬼
+    R2:
+        regex:
+        - 日你先人
+        actions:
+            replace:
+            - 我爱你祖宗
+    # S
+    S1:
+        regex:
+        - (?i)(sb)
+        - 傻逼
+        actions:
+            replace:
+            - 阳光男孩
+    S2:
+        regex:
+        - 三天之内杀了你
+        actions:
+            replace:
+            - 我们在一起吧
+    S3:
+        regex:
+        - 杀你妈
+        - 杀你马
+        actions:
+            replace:
+            - 真人快打
+    S4:
+        regex:
+        - 死妈
+        - 司马
+        actions:
+            replace:
+            - 尊老爱幼
+    S5:
+        regex:
+        - (?i)(scheisse
+        - scheiße)
+        actions:
+            replace:
+            - 饭
+    # T
+    T1:
+        regex:
+        - (?i)(tmd)
+        - 他妈的
+        - 她妈的
+        actions:
+            replace:
+            - '***'
+    T2:
+        regex:
+        - 透你
+        actions:
+            replace:
+            - 穿越
+    # W
+    W1:
+        regex:
+        - (?i)(wslnm)
+        - 我杀你妈
+        - 我杀你马
+        actions:
+            replace:
+            - 我被你马杀了
+    # X
+    X1:
+        regex:
+        - 小学生
+        actions:
+            replace:
+            - 天真的孩子
+    X2:
+        regex:
+        - 习近平
+        actions:
+            replace:
+            - '***'
+    # Y
+    Y1:
+        regex:
+        - (?i)(you son of a bitch
+        - soba)
+        - 婊子养的
+        - 狗娘养的
+        actions:
+            replace:
+            - 太阳之子
+    Y2:
+        regex:
+        - 野爹
+        actions:
+            replace:
+            - 爸比
+    Y3:
+        regex:
+        - 有病
+        actions:
+            replace:
+            - 今天忘记吃药了感觉萌萌哒
