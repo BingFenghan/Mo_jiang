@@ -1,0 +1,80 @@
+# Thanks for downloading my plugin SwearReplacer!
+#
+# This config is really easy to use. All you gotta do is put the word you want to be replaced, followed by a semicolon, then the word you want to replace it with. Like this:
+# Word;OtherWord
+# 
+# You can even use multiple words in both bits, like:
+# Thing to be replaced;Thing you're replacing it with
+# 
+# The ones below are examples. Feel free to change them. (I suggest you do as that's kinda the point of the plugin xD)
+
+replacements:
+#A:
+#B:
+- blyat;伏特加
+#C:
+- cnm;我爱你
+- 操你妈/草泥马;我爱你
+- 蔡徐坤;墨江
+- 丑逼/丑比/丑比/丑东西;你真漂亮
+- 吃屎;吃饭
+- cyka;兄弟伏特加
+#D:
+- dd;结个婚
+- 臭弟弟;结个婚
+#E:
+#F:
+- fuck;爱你
+- 肥蛆;小胖子
+- 废物;生产力
+#G:
+- 苟;*
+- 骨灰都给扬喽;还能要个孩子
+#H:
+#I:
+#J:
+- jb/几把/鸡吧;jiebi
+- 江泽民;***
+#K:
+#L:
+#M:
+#N:
+
+- 你妈死了;不要惧怕谣言与中伤
+- 你会玩吗;玩的不错
+#O:
+#P:
+# - pwp;qwq
+#Q:
+- 亲爹;爸比
+- 青蛙;**
+- qwq;pwp
+#R:
+- rz;小机灵鬼
+- 弱智/智障/沙雕;小机灵鬼
+- 日你先人;我爱你祖宗
+# - rape/雷普;特异性结合
+#S:
+- sb;阳光男孩
+- 三天之内杀了你;我们在一起吧
+- 傻逼;阳光男孩
+- 杀你妈/杀你马;真人快打
+- 死妈/司马;家庭和睦
+#T:
+- tmd;***
+- 他妈的/她妈的;***
+- 透你;穿越
+#U:
+#V:
+#W:
+- wdnmd/我打你妈的/我屌你妈的;齐心协力
+- wslnm/我杀你妈/我杀你马;我被你马杀了
+#X:
+- 小学生;玩的不错
+- 习近平;***
+#Y:
+- 野爹/爸比
+- 有病;我该去吃药了
+- you son of a bitch/soba/婊子养的/狗娘养的;太阳之子
+#Z:
+- z？查水表/z?查水表;我来看看你
